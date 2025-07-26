@@ -26,10 +26,7 @@ export const userCreateSchema = z
         'Номер телефона должен быть в формате +79211234567'
       ),
     employment: z.string().optional(),
-    userAgreement: z
-      .boolean()
-      .optional()
-      .refine((val) => val === true, 'Необходимо согласие пользователя'),
+    userAgreement: z.boolean().optional(),
   })
   .refine((data) => data.password === data.confirmPassword, {
     message: 'Пароли не совпадают',

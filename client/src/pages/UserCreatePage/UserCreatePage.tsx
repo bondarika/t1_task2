@@ -37,18 +37,26 @@ export const UserCreatePage = () => {
           // eslint-disable-next-line @typescript-eslint/no-unused-vars
           const { confirmPassword, ...data } = values;
 
-          // Отправляем все поля, включая пустые опциональные
-          const requestData = {
+          // Отправляем только заполненные поля
+          const requestData: any = {
             name: data.name,
             surName: data.surName,
             fullName: data.fullName,
             email: data.email,
             password: data.password,
             userAgreement: data.userAgreement,
-            birthDate: data.birthDate || undefined,
-            telephone: data.telephone || undefined,
-            employment: data.employment || undefined,
+            employment: data.employment || '',
           };
+
+          // Добавляем опциональные поля только если они заполнены
+          if (data.birthDate && data.birthDate.trim() !== '') {
+            requestData.birthDate = data.birthDate;
+          }
+          if (data.telephone && data.telephone.trim() !== '') {
+            requestData.telephone = data.telephone;
+          }
+
+          console.log('Отправляемые данные для создания пользователя:', requestData);
 
           await submitForm(async () => {
             await createUser(requestData as UserCreateRequest);
