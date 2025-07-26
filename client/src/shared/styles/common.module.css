@@ -1,0 +1,109 @@
+.headerButton {
+  float: right;
+  margin-top: 16px;
+}
+
+.marginBottom12 {
+  margin-bottom: 12px;
+}
+
+.marginRight8 {
+  margin-right: 8px;
+}
+
+.marginLeft8 {
+  margin-left: 8px;
+}
+
+.fullWidth {
+  width: 100%;
+}
+
+.centerBlock {
+  display: block;
+  margin: 40px auto;
+}
+
+.centerText {
+  text-align: center;
+}
+
+.formContainer {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.formTitle {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.fieldContainer {
+  margin-bottom: 16px;
+}
+
+.fieldContainer label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #262626;
+}
+
+.formRow {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.formRow .fieldContainer {
+  flex: 1;
+  margin-bottom: 0;
+}
+
+.formRow .fieldContainer:first-child {
+  flex: 1;
+}
+
+.formRow .fieldContainer:last-child {
+  flex: 1;
+}
+
+.checkboxContainer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.checkboxLabel {
+  font-size: 14px;
+  color: #262626;
+  cursor: pointer;
+}
+
+.checkboxContainer :global(.ant-checkbox-wrapper) {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: none;
+  box-shadow: none;
+}
+
+.errorText {
+  color: #ff4d4f;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+/* Стили для кнопок подтверждения удаления */
+:global(.ant-popconfirm-buttons) {
+  display: flex;
+  gap: 8px;
+}
+
+:global(.ant-popconfirm-buttons .ant-btn) {
+  flex: 1;
+  min-width: 60px;
+}
+ 

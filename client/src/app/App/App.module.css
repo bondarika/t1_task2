@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&display=swap');
+
+* {
+  font-family: 'Manrope', 'Segoe UI', Arial, sans-serif !important;
+}
+
+#root {
+  width: 100vw;
+  height: 100vh;
+}
+
+.app-root {
+  min-height: 100vh;
+  min-width: 100vw;
+}
